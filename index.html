@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="calc">
+        <div id="content">
+            <form onsubmit="return false;">
+                <div id="output">
+                    <input type="text" id="res" readonly>
+                </div>
+                <div class="btn">
+                    <!-- Clear and basic operators -->
+                    <input type="button" value="C" onclick="Clear()" id="clear">
+                    <input type="button" value="⌫" onclick="Back()" id="backspace">
+                    <input type="button" value="%" onclick="Solve('%')">
+                    <input type="button" value="/" onclick="Solve('/')">
+                    <br>
+
+                    <!-- Number buttons -->
+                    <input type="button" value="7" class="number" onclick="Solve('7')">
+                    <input type="button" value="8" class="number" onclick="Solve('8')">
+                    <input type="button" value="9" class="number" onclick="Solve('9')">
+                    <input type="button" value="x" onclick="Solve('x')">
+                    <br>
+                    <input type="button" value="4" class="number" onclick="Solve('4')">
+                    <input type="button" value="5" class="number" onclick="Solve('5')">
+                    <input type="button" value="6" class="number" onclick="Solve('6')">
+                    <input type="button" value="-" onclick="Solve('-')">
+                    <br>
+                    <input type="button" value="1" class="number" onclick="Solve('1')">
+                    <input type="button" value="2" class="number" onclick="Solve('2')">
+                    <input type="button" value="3" class="number" onclick="Solve('3')">
+                    <input type="button" value="+" onclick="Solve('+')">
+                    <br>
+                    <input type="button" value="00" class="number" onclick="Solve('00')">
+                    <input type="button" value="0" class="number" onclick="Solve('0')">
+                    <input type="button" value="." onclick="Solve('.')">
+                    <input type="button" value="=" onclick="Result()">
+                    <br>
+
+                    <!-- Scientific buttons -->
+                    <input type="button" value="(" onclick="Solve('(')">
+                    <input type="button" value=")" onclick="Solve(')')">
+                    <input type="button" value="√" onclick="Solve('sqrt(')">
+                    <input type="button" value="^" onclick="Solve('^')">
+                    <br>
+                    <input type="button" value="sin" onclick="Solve('sin(')">
+                    <input type="button" value="cos" onclick="Solve('cos(')">
+                    <input type="button" value="tan" onclick="Solve('tan(')">
+                    <input type="button" value="log" onclick="Solve('log(')">
+                    <br>
+                    <input type="button" value="π" onclick="Solve('π')">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
